@@ -36,6 +36,28 @@ class MyApp extends StatelessWidget {
                     child: Text('Basic Alert'),
                   );
                 },
+              ),
+              Builder(
+                builder: (context) {
+                  return RaisedButton(
+                    onPressed: () {
+                      Alert(
+                          context: context,
+                          type: AlertType.error,
+                          title: 'Alert With Button',
+                          desc: 'It generate Alert Along a button',
+                          buttons: [
+                            DialogButton(
+                              child: Text('COOL'),
+                              onPressed: () {
+                                return Navigator.pop(context);
+                              },
+                            )
+                          ]).show();
+                    },
+                    child: Text('Alert Button'),
+                  );
+                },
               )
             ],
           ),
