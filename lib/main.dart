@@ -10,7 +10,37 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('Alert Generator'),
+          backgroundColor: Colors.red,
+          leading: Icon(
+            Icons.warning_amber_rounded,
+            size: 30.0,
+          ),
+        ),
+        body: Center(
+          child: Column(
+            children: [
+              Builder(
+                builder: (context) {
+                  return RaisedButton(
+                    onPressed: () {
+                      Alert(
+                              context: context,
+                              title: 'Basic Alert',
+                              desc: 'It generate basic alert')
+                          .show();
+                    },
+                    child: Text('Basic Alert'),
+                  );
+                },
+              )
+            ],
+          ),
+        ),
+      ),
+    );
   }
-}
 }
