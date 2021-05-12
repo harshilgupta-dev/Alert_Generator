@@ -167,11 +167,22 @@ class MyApp extends StatelessWidget {
                         content: Column(
                           children: [
                             TextField(
+                              decoration: InputDecoration(
+                                icon: Icon(Icons.account_circle,),
+                                labelText: 'Username'
+                              ),
+                            ),
+                            TextField(
+                            obscureText: true,
+                            decoration: InputDecoration(
+                                icon: Icon(Icons.keyboard),
+                                labelText: 'Password',
 
+                              ),
                             )
                           ],
                         )
-                      )
+                      ).show();
                 });
               })
             ],
