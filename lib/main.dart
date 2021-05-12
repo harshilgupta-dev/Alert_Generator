@@ -150,7 +150,10 @@ class MyApp extends StatelessWidget {
                     child: Text('Alert with customImage'),
                     onPressed: (){
                       Alert(
-                        context:
+                        context: context,
+                        title: 'Alert',
+                        desc: 'Alert with custom Image',
+                        image: Image.asset('images/temp.png')
                       ).show();
                 });
               })
