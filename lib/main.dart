@@ -87,61 +87,71 @@ class MyApp extends StatelessWidget {
                               color: Color.fromRGBO(0, 179, 134, 1.0),
                             ),
                             DialogButton(
-                                child: Text(
-                                  'Gradient',
-                                  style: TextStyle(
-                                      color: Colors.white, fontSize: 20),
-                                ),
-                                onPressed: () {
-                                  return Navigator.pop(context);
-                                },
-                                gradient: LinearGradient(
-                                  colors: [
-                                    Color.fromRGBO(116, 116, 118, 1.0),
-                                    Color.fromRGBO(52, 118, 118, 1.0)
-                                  ]
-                                ),
+                              child: Text(
+                                'Gradient',
+                                style: TextStyle(
+                                    color: Colors.white, fontSize: 20),
+                              ),
+                              onPressed: () {
+                                return Navigator.pop(context);
+                              },
+                              gradient: LinearGradient(colors: [
+                                Color.fromRGBO(116, 116, 118, 1.0),
+                                Color.fromRGBO(52, 118, 118, 1.0)
+                              ]),
                             ),
                           ]).show();
                     },
                   );
                 },
               ),
+              Builder(
+                builder: (context) {
+                  return RaisedButton(
+                    child: Text('Alert With Style'),
+                    onPressed: () {
+                      Alert(
+                        context: context,
+                        title: 'Alert Style',
+                        desc: 'Alert With Style',
+                        style: alertStyle(),
+                        type: AlertType.info,
+                        buttons: [
+                          DialogButton(
+                              child: Text(
+                                'Cool',
+                                style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 20.0),
+                              ),
+                              onPressed: () {
+                                return Navigator.pop(context);
+                              },
+                              width: 150.0,
+                              color: Colors.red,
+                              //highlightColor: Colors.black,
+                              //splashColor: Colors.black,
+                              gradient: LinearGradient(
+                                colors: [
+                                  Color.fromRGBO(116, 116, 52, 1.0),
+                                  Color.fromRGBO(50, 150, 191, 1.0)
+                                ],
+                              ),
+                              radius: BorderRadius.circular(20.0))
+                        ],
+                      ).show();
+                    },
+                  );
+                },
+              ),
               Builder(builder: (context){
                 return RaisedButton(
-                    child: Text('Alert With Style'),
+                    child: Text('Alert with customImage'),
                     onPressed: (){
-                  Alert(
-                    context: context,
-                    title: 'Alert Style',
-                    desc: 'Alert With Style',
-                    style: alertStyle(),
-                    type: AlertType.info,
-                    buttons: [
-                      DialogButton(child: Text('Cool',style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20.0
-                      ),),
-                          onPressed: (){
-                        return Navigator.pop(context);
-                          },
-                        width: 150.0,
-                        color: Colors.red,
-                        //highlightColor: Colors.black,
-                        //splashColor: Colors.black,
-                        gradient: LinearGradient(
-                          colors: [
-                            Color.fromRGBO(116, 116, 52, 1.0),
-                            Color.fromRGBO(50, 150, 191, 1.0)
-                          ]
-                        ),
-                        radius: BorderRadius.circular(20.0)
-                      )
-                    ]
-
-
-                  ).show();
+                      Alert(
+                        context:
+                      ).show();
                 });
               })
             ],
@@ -152,19 +162,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
-AlertStyle alertStyle(){
+AlertStyle alertStyle() {
   return AlertStyle(
-    animationType: AnimationType.grow,
-    animationDuration: Duration(milliseconds: 650),
-    isCloseButton: false,
-    descStyle: TextStyle(
-      fontWeight: FontWeight.bold,
-    ),
-    titleStyle: TextStyle(
-      fontWeight: FontWeight.bold,
-      fontSize: 30.0,
-      color: Colors.red
-    ),
-    backgroundColor: Colors.grey[200]
-  );
+      animationType: AnimationType.grow,
+      animationDuration: Duration(milliseconds: 650),
+      isCloseButton: false,
+      descStyle: TextStyle(
+        fontWeight: FontWeight.bold,
+      ),
+      titleStyle: TextStyle(
+          fontWeight: FontWeight.bold, fontSize: 30.0, color: Colors.red),
+      backgroundColor: Colors.grey[200]);
 }
