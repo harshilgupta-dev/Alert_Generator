@@ -106,7 +106,20 @@ class MyApp extends StatelessWidget {
                     },
                   );
                 },
-              )
+              ),
+              Builder(builder: (context){
+                return RaisedButton(
+                    child: Text('Alert With Style'),
+                    onPressed: (){
+                  Alert(
+                    context: context,
+                    title: 'Alert Style',
+                    desc: 'Alert With Style',
+                    style: alertStyle(),
+
+                  ).show();
+                });
+              })
             ],
           ),
         ),
@@ -118,6 +131,6 @@ class MyApp extends StatelessWidget {
 AlertStyle alertStyle(){
   return AlertStyle(
     animationType: AnimationType.grow,
-
+    animationDuration: Duration(milliseconds: 650)
   );
 }
