@@ -116,7 +116,14 @@ class MyApp extends StatelessWidget {
                     title: 'Alert Style',
                     desc: 'Alert With Style',
                     style: alertStyle(),
-                    type: AlertType.info
+                    type: AlertType.info,
+                    buttons: [
+                      DialogButton(child: Text('Cool'),
+                          onPressed: (){
+                        return Navigator.pop(context);
+                          })
+                    ]
+
 
                   ).show();
                 });
