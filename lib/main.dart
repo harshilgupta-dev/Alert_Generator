@@ -156,6 +156,23 @@ class MyApp extends StatelessWidget {
                         image: Image.asset('images/temp.png')
                       ).show();
                 });
+              }),
+              Builder(builder: (context){
+                return RaisedButton(
+                    child: Text('Alert with Custom Content'),
+                    onPressed: (){
+                      Alert(
+                        context: context,
+                        title: 'Login',
+                        content: Column(
+                          children: [
+                            TextField(
+
+                            )
+                          ],
+                        )
+                      )
+                });
               })
             ],
           ),
