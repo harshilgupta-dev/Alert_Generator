@@ -136,6 +136,7 @@ class MyApp extends StatelessWidget {
                             Color.fromRGBO(50, 150, 191, 1.0)
                           ]
                         ),
+                        radius: BorderRadius.circular(20.0)
                       )
                     ]
 
