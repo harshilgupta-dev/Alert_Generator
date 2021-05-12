@@ -121,7 +121,9 @@ class MyApp extends StatelessWidget {
                       DialogButton(child: Text('Cool'),
                           onPressed: (){
                         return Navigator.pop(context);
-                          })
+                          },
+                        width: 150.0,
+                      )
                     ]
 
 
