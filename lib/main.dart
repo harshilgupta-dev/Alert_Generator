@@ -117,6 +117,7 @@ class MyApp extends StatelessWidget {
 
 AlertStyle alertStyle(){
   return AlertStyle(
+    animationType: AnimationType.grow,
 
   );
 }
