@@ -131,6 +131,7 @@ class MyApp extends StatelessWidget {
 AlertStyle alertStyle(){
   return AlertStyle(
     animationType: AnimationType.grow,
-    animationDuration: Duration(milliseconds: 650)
+    animationDuration: Duration(milliseconds: 650),
+    isCloseButton: false
   );
 }
