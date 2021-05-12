@@ -48,7 +48,14 @@ class MyApp extends StatelessWidget {
                           desc: 'It generate Alert Along a button',
                           buttons: [
                             DialogButton(
-                              child: Text('COOL'),
+                              child: Text(
+                                'Close It',
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 25.0,
+                                  color: Colors.white,
+                                ),
+                              ),
                               onPressed: () {
                                 return Navigator.pop(context);
                               },
