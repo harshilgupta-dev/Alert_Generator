@@ -136,5 +136,9 @@ AlertStyle alertStyle(){
     descStyle: TextStyle(
       fontWeight: FontWeight.bold,
     ),
+    titleStyle: TextStyle(
+      fontWeight: FontWeight.bold,
+      fontSize: 30.0
+    )
   );
 }
