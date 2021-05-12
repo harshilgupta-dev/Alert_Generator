@@ -163,7 +163,8 @@ class MyApp extends StatelessWidget {
                     onPressed: (){
                       Alert(
                         context: context,
-                        title: 'Login',
+                        title: 'LOGIN PAGE',
+                        type: AlertType.info,
                         content: Column(
                           children: [
                             TextField(
@@ -181,7 +182,14 @@ class MyApp extends StatelessWidget {
                               ),
                             )
                           ],
-                        )
+                        ),
+                        buttons: [
+                          DialogButton(child: Text('Login'),
+                              onPressed: (){
+                                return Navigator.pop(context);
+                              }
+                              )
+                        ]
                       ).show();
                 });
               })
