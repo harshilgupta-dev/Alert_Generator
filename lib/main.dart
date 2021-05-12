@@ -65,7 +65,28 @@ class MyApp extends StatelessWidget {
                     child: Text('Alert Button'),
                   );
                 },
-              )
+              ),
+              Builder(builder: (context){
+                return RaisedButton(
+                  child: Text('Alert Buttons'),
+                  onPressed: (){
+                  Alert(
+                    type: AlertType.warning,
+                    title: 'Alert with Buttons',
+                    desc: 'Alert with multiple buttons',
+                    context: context,
+                    buttons: [
+                      DialogButton(child: Text(' FLAT',style: TextStyle(color: Colors.white, fontSize: 20)),
+                          onPressed: (){
+                            return Navigator.pop(context);
+                          },
+                        color: Color.fromRGBO(0, 179, 134, 1.0),
+                      ),
+                    ]
+                  ).show();
+                },
+                );
+              },)
             ],
           ),
         ),
