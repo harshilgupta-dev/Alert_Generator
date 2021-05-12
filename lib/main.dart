@@ -138,7 +138,9 @@ AlertStyle alertStyle(){
     ),
     titleStyle: TextStyle(
       fontWeight: FontWeight.bold,
-      fontSize: 30.0
-    )
+      fontSize: 30.0,
+      color: Colors.red
+    ),
+    backgroundColor: Colors.grey[200]
   );
 }
