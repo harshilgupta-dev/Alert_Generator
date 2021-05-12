@@ -118,11 +118,17 @@ class MyApp extends StatelessWidget {
                     style: alertStyle(),
                     type: AlertType.info,
                     buttons: [
-                      DialogButton(child: Text('Cool'),
+                      DialogButton(child: Text('Cool',style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                          fontSize: 20.0
+                      ),),
                           onPressed: (){
                         return Navigator.pop(context);
                           },
                         width: 150.0,
+                        color: Colors.red,
+                        highlightColor: Colors.black,
                       )
                     ]
 
