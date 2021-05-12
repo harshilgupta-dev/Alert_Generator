@@ -116,6 +116,7 @@ class MyApp extends StatelessWidget {
                     title: 'Alert Style',
                     desc: 'Alert With Style',
                     style: alertStyle(),
+                    type: AlertType.info
 
                   ).show();
                 });
