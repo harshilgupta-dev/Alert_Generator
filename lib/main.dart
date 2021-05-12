@@ -129,7 +129,7 @@ class MyApp extends StatelessWidget {
                         width: 150.0,
                         color: Colors.red,
                         //highlightColor: Colors.black,
-                        splashColor: Colors.black,
+                        //splashColor: Colors.black,
                         gradient: LinearGradient(
                           colors: [
                             Color.fromRGBO(116, 116, 52, 1.0),
