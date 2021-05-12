@@ -27,12 +27,11 @@ class MyApp extends StatelessWidget {
             children: [
               Padding(
                 padding: EdgeInsets.fromLTRB(0, 0, 0, 50.0),
-                child: Image(image: AssetImage('images/warning.png'),
-                  width: 300.0,
-                  height: 300.0,
-
-                  color: Colors.red[500]
-                ),
+                child: Image(
+                    image: AssetImage('images/warning.png'),
+                    width: 300.0,
+                    height: 300.0,
+                    color: Colors.red[500]),
               ),
               Builder(
                 builder: (context) {
@@ -156,53 +155,52 @@ class MyApp extends StatelessWidget {
                   );
                 },
               ),
-              Builder(builder: (context){
+              Builder(builder: (context) {
                 return RaisedButton(
                     child: Text('Alert with customImage'),
-                    onPressed: (){
+                    onPressed: () {
                       Alert(
-                        context: context,
-                        title: 'Alert',
-                        desc: 'Alert with custom Image',
-                        image: Image.asset('images/temp.png')
-                      ).show();
-                });
+                              context: context,
+                              title: 'Alert',
+                              desc: 'Alert with custom Image',
+                              image: Image.asset('images/temp.png'))
+                          .show();
+                    });
               }),
-              Builder(builder: (context){
+              Builder(builder: (context) {
                 return RaisedButton(
                     child: Text('Alert with Custom Content'),
-                    onPressed: (){
+                    onPressed: () {
                       Alert(
-                        context: context,
-                        title: 'LOGIN PAGE',
-                        type: AlertType.success,
-                        content: Column(
-                          children: [
-                            TextField(
-                              decoration: InputDecoration(
-                                icon: Icon(Icons.account_circle,),
-                                labelText: 'Username'
+                          context: context,
+                          title: 'LOGIN PAGE',
+                          type: AlertType.success,
+                          content: Column(
+                            children: [
+                              TextField(
+                                decoration: InputDecoration(
+                                    icon: Icon(
+                                      Icons.account_circle,
+                                    ),
+                                    labelText: 'Username'),
                               ),
-                            ),
-                            TextField(
-                            obscureText: true,
-                            decoration: InputDecoration(
-                                icon: Icon(Icons.keyboard),
-                                labelText: 'Password',
-
-                              ),
-                            )
-                          ],
-                        ),
-                        buttons: [
-                          DialogButton(child: Text('Login'),
-                              onPressed: (){
-                                return Navigator.pop(context);
-                              }
+                              TextField(
+                                obscureText: true,
+                                decoration: InputDecoration(
+                                  icon: Icon(Icons.keyboard),
+                                  labelText: 'Password',
+                                ),
                               )
-                        ]
-                      ).show();
-                });
+                            ],
+                          ),
+                          buttons: [
+                            DialogButton(
+                                child: Text('Login'),
+                                onPressed: () {
+                                  return Navigator.pop(context);
+                                })
+                          ]).show();
+                    });
               })
             ],
           ),
