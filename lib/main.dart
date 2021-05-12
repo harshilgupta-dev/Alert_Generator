@@ -132,6 +132,9 @@ AlertStyle alertStyle(){
   return AlertStyle(
     animationType: AnimationType.grow,
     animationDuration: Duration(milliseconds: 650),
-    isCloseButton: false
+    isCloseButton: false,
+    descStyle: TextStyle(
+      fontWeight: FontWeight.bold,
+    ),
   );
 }
