@@ -128,7 +128,8 @@ class MyApp extends StatelessWidget {
                           },
                         width: 150.0,
                         color: Colors.red,
-                        highlightColor: Colors.black,
+                        //highlightColor: Colors.black,
+                        splashColor: Colors.blue,
                       )
                     ]
 
